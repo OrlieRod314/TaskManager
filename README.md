@@ -24,9 +24,8 @@ Other features:
 # Installation
 
 1. Download and install Java
-2. From command line run:
-
-    `git clone https://github.com/OrlieRod314/TaskManager.git`
+2. Download and install Eclipse IDE for Java Developers
+3. Follow [instructions on importing project from Git in Eclipse](https://www.youtube.com/watch?v=L8IeaWHZCRo)
 
 # Usage
 
