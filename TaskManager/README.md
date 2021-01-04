@@ -26,7 +26,7 @@ Other features:
 1. Download and install Java
 2. From command line run:
 
-    `git install https://github.com/OrlieRod314/TaskManager.git`
+    `git clone https://github.com/OrlieRod314/TaskManager.git`
 
 # Usage
 
