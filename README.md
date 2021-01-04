@@ -25,7 +25,7 @@ Other features:
 
 1. Download and install Java
 2. Download and install Eclipse IDE for Java Developers
-3. Follow [instructions on importing project from Git in Eclipse](https://www.youtube.com/watch?v=L8IeaWHZCRo)
+3. Follow [instructions on importing project from Git in Eclipse](https://youtu.be/38JFCqi_X3c)
 
 # Usage
 
