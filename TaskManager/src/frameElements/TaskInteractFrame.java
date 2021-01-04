@@ -14,6 +14,11 @@ import javax.swing.JTextField;
 import dataStructures.Task;
 import main.Main;
 
+/**
+ * Window for adding/deleting tasks
+ * @author Orlando Rodriguez
+ *
+ */
 public class TaskInteractFrame extends PopupFrame implements ActionListener{
 	String iconPath;
 	JTextField name, description, priority;
@@ -21,10 +26,12 @@ public class TaskInteractFrame extends PopupFrame implements ActionListener{
 
 	public TaskInteractFrame(String title) {
 		super(title);
+		// Adding tasks
 		if (title.equals("Add Task")) {
 			iconPath = "images/add.png";
 			makeAddInput();
 		}
+		// Removing tasks
 		if (title.equals("Delete Task")) {
 			iconPath = "images/delete.png";
 			makeDeleteInput();
@@ -34,20 +41,27 @@ public class TaskInteractFrame extends PopupFrame implements ActionListener{
 		this.setVisible(true);
 	}
 
+	/**
+	 * Formats popup for adding tasks
+	 */
 	private void makeAddInput() {
 		this.setLayout(new GridLayout(4, 2));
 
+		// Submit button
 		submit = new JButton("Submit");
 		submit.addActionListener(this);
 		
+		// Creating input fields
 		name = new JTextField();
 		description = new JTextField();
 		priority = new JTextField();
 		
+		// Sizing input fields
 		name.setPreferredSize(new Dimension(250, 40));
 		description.setPreferredSize(new Dimension(250, 40));
 		priority.setPreferredSize(new Dimension(250, 40));
 		
+		// Labeling text fields
 		JLabel nameIndicator = new JLabel("Name: ");
 		// nameIndicator.setHorizontalTextPosition(JLabel.CENTER);
 		// nameIndicator.setVerticalTextPosition(JLabel.CENTER);
@@ -60,6 +74,7 @@ public class TaskInteractFrame extends PopupFrame implements ActionListener{
 		// priIndicator.setHorizontalTextPosition(JLabel.CENTER);
 		// priIndicator.setVerticalTextPosition(JLabel.CENTER);
 
+		// Adding elements to popup
 		this.add(nameIndicator);
 		this.add(name);
 		this.add(descIndicator);
@@ -73,16 +88,20 @@ public class TaskInteractFrame extends PopupFrame implements ActionListener{
 	private void makeDeleteInput() {
 		this.setLayout(new GridLayout(2, 2));
 		
+		// Remove button
 		remove = new JButton("Remove");
 		remove.addActionListener(this);
 		
+		// Creating input fields
 		name = new JTextField();
 		name.setPreferredSize(new Dimension(250, 40));
 		
+		// Labeling text fields
 		JLabel nameIndicator = new JLabel("Name: ");
-		nameIndicator.setHorizontalTextPosition(JLabel.CENTER);
-		nameIndicator.setVerticalTextPosition(JLabel.CENTER);
+		// nameIndicator.setHorizontalTextPosition(JLabel.CENTER);
+		// nameIndicator.setVerticalTextPosition(JLabel.CENTER);
 		
+		// Adding elements to popup
 		this.add(nameIndicator);
 		this.add(name);
 		this.add(remove);
@@ -90,8 +109,13 @@ public class TaskInteractFrame extends PopupFrame implements ActionListener{
 	}
 	
 	@Override
+	/**
+	 * Event handler
+	 */
 	public void actionPerformed(ActionEvent e) {
+		// Adding task
 		if (e.getSource() == submit) {
+			// Creates task using fields
 			String taskName = name.getText();
 			String taskDesc = description.getText();
 			int taskPriority = Integer.valueOf(priority.getText());
@@ -103,6 +127,7 @@ public class TaskInteractFrame extends PopupFrame implements ActionListener{
 			}
 			this.dispose();
 		}
+		// Removing task
 		if (e.getSource() == remove) {
 			String taskName = name.getText();
 			try {

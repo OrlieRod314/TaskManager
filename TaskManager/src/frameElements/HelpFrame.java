@@ -5,6 +5,12 @@ import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 
+/**
+ * Help window class
+ * No functionality as of now
+ * @author Orlando Rodriguez
+ *
+ */
 public class HelpFrame extends PopupFrame implements ActionListener{
 	String iconPath = "images/help.png";
 	
@@ -18,7 +24,7 @@ public class HelpFrame extends PopupFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		// TODO Finish Help Window
 		
 	}
 

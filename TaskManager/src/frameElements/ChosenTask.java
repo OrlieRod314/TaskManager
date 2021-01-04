@@ -9,6 +9,11 @@ import javax.swing.border.Border;
 
 import dataStructures.Task;
 
+/**
+ * Class representing upper section of main window
+ * @author Orlando Rodriguez
+ *
+ */
 public class ChosenTask extends JLabel{ 
 	public static Border border = BorderFactory.createTitledBorder(MyFrame.baseBorder, "Most Urgent Task");
 

@@ -1,5 +1,10 @@
 package dataStructures;
 
+/**
+ * Class representing a Task for the TaskManager
+ * @author Orlando Rodriguez
+ *
+ */
 public class Task implements Comparable<Task>{
 	public String name;
 	public String description;
@@ -22,10 +27,18 @@ public class Task implements Comparable<Task>{
 	}
 
 	@Override
+	/**
+	 * Used for implementation in Priority Queue
+	 * @return int 
+	 */
 	public int compareTo(Task t) {
 		return Integer.compare(this.priority, t.priority);
 	}
 	
+	/**
+	 * Checks if two tasks are equivalent
+	 * @return boolean
+	 */
 	public boolean equals(Object o) {
 		if (o instanceof Task) {
 			Task other = (Task) o;
