@@ -1,0 +1,18 @@
+FAFSA
+Submit FAFSA
+1
+Counselor
+Attend meeting
+2
+Fencing
+Attend practice and submit forms
+5
+CS
+Finish PA 12
+3
+Math
+Finish problem set
+2
+Game
+Finish FF15
+10
