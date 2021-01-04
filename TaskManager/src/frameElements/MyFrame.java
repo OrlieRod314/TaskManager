@@ -142,7 +142,7 @@ public class MyFrame extends JFrame implements ActionListener{
 			 Main.tasks = Main.readTasks(file);
 			 
 			 // For debugging purposes
-			 System.out.println(Main.tasks);
+			 // System.out.println(Main.tasks);
 			 
 			 Main.taskList = new TaskList();
 			 Main.chooseTask();
